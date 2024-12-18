@@ -17,6 +17,8 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
+            
+            <Image Source="home.svg" BackgroundColor="Red"></Image>
         </Grid>
     </Grid>
 </ContentPage>
