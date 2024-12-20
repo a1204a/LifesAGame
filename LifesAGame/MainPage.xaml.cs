@@ -2,11 +2,15 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void TaskManagerLink_Clicked(object sender, EventArgs e)
+        {
+            TaskManagerLink.Text = "Was clicked";
+
         }
 
     }

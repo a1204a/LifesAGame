@@ -4,21 +4,31 @@
              x:Class="LivesAGame.MainPage">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="60*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
         </Grid.RowDefinitions>
-        
-        <Grid Grid.Row="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            
-            <Image Source="home.svg" BackgroundColor="Red"></Image>
+
+        <Grid Grid.Row="1" BackgroundColor="Beige">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button x:Name="TaskManagerLink"  Text="Task Manager" TextColor="Black" Grid.Row="0" HorizontalOptions="Center" 
+                    VerticalOptions="Center" Clicked="TaskManagerLink_Clicked" IsEnabled="True" WidthRequest="120"/>
+            <Button Text="Mood Tracker" TextColor="Black" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="120"
+                    IsEnabled="True"/>
+            <Button Text="Profil" TextColor="Black" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="120" IsEnabled="True"
+                    />
         </Grid>
+
+        <Label Text="Header" BackgroundColor="Red" Grid.ColumnSpan="2"/>
     </Grid>
 </ContentPage>
