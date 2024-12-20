@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LifesAGame.Pages.MoodTracker"
+             Title="MoodTracker">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="1" BackgroundColor="White">
+            <ProgressBar Progress="0.5" ProgressColor="Green"/>
+        </Grid>
+        
+        <Grid Grid.Row="2" BackgroundColor="Purple">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="TaskManagerLink"  Text="Task Manager" TextColor="Black" Grid.Column="0" HorizontalOptions="Center" 
+                    VerticalOptions="Center" Clicked="TaskManagerLink_Clicked" IsEnabled="True" WidthRequest="120"/>
+            <Button x:Name="MoodTrackerLink" Text="Mood Tracker" TextColor="Black" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="120"
+                    IsEnabled="True"/>
+            <Button x:Name="ProfilLink" Text="Profil" TextColor="Black" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="120" IsEnabled="True"
+                    Clicked="ProfilLink_Clicked"/>
+        </Grid>
+
+    </Grid>
+</ContentPage>
